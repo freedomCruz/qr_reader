@@ -13,5 +13,8 @@ Future<void> launchUrls(BuildContext context, ScanModel scan) async {
       throw Exception('Could not launch $url');
     }
     await launchUrl(url);
+    
+  }else{
+    Navigator.pushNamed( context, 'mapa', arguments: scan);
   }
 }
